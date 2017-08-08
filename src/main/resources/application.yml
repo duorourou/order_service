@@ -1,0 +1,18 @@
+server:
+  port: 8762
+eureka:
+  client:
+    service-url:
+      defaultZone: http://192.168.56.101:5607/eureka/
+  instance:
+    prefer-ip-address: true
+    ip-address: 192.168.56.1
+
+logging:
+  level:
+    org.exampledriven.eureka.customer.shared.CustomerServiceFeignClient: FULL
+    org.exampledriven.eureka: DEBUG
+
+spring:
+  application:
+    name: order_service
